@@ -1,0 +1,38 @@
+*{box-sizing:border-box} html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#030611;color:#eaf7ff;font-family:Arial,sans-serif}
+  #game{position:fixed;inset:0;display:block;width:100%;height:100%;touch-action:none}
+  #hud{position:fixed;inset:0;pointer-events:none}
+  .panel{background:rgba(3,10,28,.72);border:1px solid rgba(91,210,255,.45);box-shadow:0 0 20px #00aaff22;border-radius:12px;padding:10px 14px;backdrop-filter:blur(5px)}
+  #stats{position:absolute;top:12px;left:12px;display:flex;gap:8px;flex-wrap:wrap;font-size:14px}
+  #healthbar{width:110px;height:8px;background:#51222e;border-radius:10px;overflow:hidden;margin-top:5px}
+  #healthfill{height:100%;width:100%;background:#43f5a4;transition:width .15s}
+  #message{position:absolute;top:18%;left:50%;transform:translateX(-50%);text-align:center;font-size:clamp(18px,4vw,32px);font-weight:bold;text-shadow:0 0 18px #00cfff;max-width:90%}
+  #menu{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,#12244ccc,#030611f5);pointer-events:auto;padding:18px}
+  #card{max-width:520px;width:100%;text-align:center;padding:28px 22px;border:1px solid #3bd9ff88;border-radius:22px;background:#071226eF;box-shadow:0 0 45px #00aaff2b}
+  h1{margin:0 0 8px;font-size:clamp(30px,7vw,52px);color:#79edff;text-shadow:0 0 22px #00bfff}
+  p{line-height:1.5;color:#c5d9ec}
+  button{pointer-events:auto;cursor:pointer;border:0;border-radius:12px;padding:13px 17px;font-size:16px;font-weight:bold;color:#03101c;background:linear-gradient(135deg,#80f4ff,#49bfff);box-shadow:0 0 18px #00bfff44}
+  button:active{transform:scale(.97)} .buttons{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+  #help{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);font-size:12px;text-align:center;color:#c5d9ec;background:#03061199;padding:7px 10px;border-radius:10px;max-width:95%;white-space:normal}
+  #mobile{position:absolute;bottom:65px;left:0;right:0;display:none;justify-content:space-between;align-items:end;padding:0 18px;pointer-events:none}
+  .joy-wrap{display:flex;flex-direction:column;align-items:center;gap:5px;pointer-events:auto;touch-action:none;user-select:none}
+  .joy-label{font-size:10px;letter-spacing:1.5px;color:#8ceeff;text-shadow:0 0 8px #00bfff}
+  #joyBase{width:136px;height:136px;border-radius:50%;position:relative;border:2px solid #56eaff99;background:radial-gradient(circle,#16466caa,#07182dcc 68%);box-shadow:inset 0 0 20px #00bfff33,0 0 18px #00bfff22;touch-action:none}
+  #joyBase:before{content:"";position:absolute;inset:16px;border:1px dashed #5ce8ff44;border-radius:50%}
+  #joyKnob{position:absolute;left:50%;top:50%;width:55px;height:55px;transform:translate(-50%,-50%);border-radius:50%;border:2px solid #b6f8ff;background:linear-gradient(145deg,#75f3ffdd,#1685c9dd);box-shadow:0 0 18px #00cfff99;pointer-events:none}
+  .fire{width:82px;height:82px;border-radius:50%;font-size:12px;background:radial-gradient(circle at 35% 25%,#ff92c3,#9c204dcc 72%);border:2px solid #ffb3d2;color:#fff;touch-action:none}
+  #vrNote{font-size:12px;color:#9db6ce}
+  #shop{display:none;position:absolute;inset:0;pointer-events:auto;align-items:center;justify-content:center;background:#020611d9;padding:16px;z-index:5}
+  #shopCard{width:min(560px,100%);background:#08152a;border:1px solid #56dfff;border-radius:20px;padding:22px;text-align:center;box-shadow:0 0 40px #00bfff33}
+  #shopOptions{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:16px 0}
+  #shopOptions button{min-height:92px;line-height:1.35}
+  #weaponBar{position:absolute;top:105px;left:12px;display:flex;gap:6px;pointer-events:auto;flex-wrap:wrap}
+  #weaponBar button{padding:8px 10px;font-size:12px;background:#0a234acc;color:#dffaff;border:1px solid #5ce8ff88;box-shadow:none}
+  #weaponBar button.active{background:#6beaff;color:#04101d}
+  #lobbyStatus{font-size:12px;color:#80f4ff;overflow-wrap:anywhere}
+  #shipSelect{width:100%;padding:11px;border-radius:10px;border:1px solid #418ba8;background:#06101e;color:#eaf7ff;font-size:15px;margin-top:8px}
+  .miniLabel{font-size:12px;letter-spacing:1.5px;color:#82eaff;text-transform:uppercase;margin:14px 0 4px}
+  #mapTag{position:absolute;right:12px;top:12px;max-width:155px;text-align:right;font-size:11px;line-height:1.5;color:#b8eaff;text-shadow:0 0 8px #00aaff;background:#04102099;padding:8px 10px;border:1px solid #3acfff44;border-radius:10px}
+  #mapTag b{color:#fff}
+  #roomCode{width:100%;padding:12px;border-radius:10px;border:1px solid #418ba8;background:#06101e;color:#eaf7ff;font-size:16px;margin-top:8px}
+  @media(max-width:520px){#stats{font-size:11px;gap:5px} .panel{padding:8px} #weaponBar{top:112px;max-width:95%}}
+  @media (pointer:coarse){#mobile{display:flex}#help{bottom:5px}}

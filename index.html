@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Space Monsters VR — Galactic Upgrade</title>
+<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+<div id="hud">
+  <div id="stats">
+    <div class="panel">⭐ Pontos: <b id="score">0</b></div>
+    <div class="panel">🌊 Onda: <b id="wave">1</b></div>
+    <div class="panel">👾 Restantes: <b id="remaining">0</b></div>
+    <div class="panel">❤️ Energia <div id="healthbar"><div id="healthfill"></div></div></div>
+  </div>
+  <div id="message"></div>
+  <div id="mapTag">SECTOR <b>NEBULA-07</b><br>ESTAÇÃO ORION · CAMPO DE ASTEROIDES</div>
+  <div id="weaponBar"><button data-weapon="laser" class="active">1 · LASER</button><button data-weapon="plasma">2 · PLASMA</button><button data-weapon="spread">3 · DISPERSÃO</button></div>
+  <div id="mobile">
+    <div class="joy-wrap"><div id="joyBase" aria-label="Joystick de movimento"><div id="joyKnob"></div></div><div class="joy-label">MOVER</div></div>
+    <button class="fire" id="fireBtn">DISPARAR</button>
+  </div>
+  <div id="help">Joystick mover · arraste a tela para mirar · DISPARAR · P pausar · VR: use o botão Entrar em VR em dispositivo compatível</div>
+  <div id="menu">
+    <div id="card">
+      <h1>SPACE<br>MONSTERS VR</h1>
+      <p>Sobreviva a ondas de criaturas alienígenas, ganhe pontos e tente chegar cada vez mais longe no espaço.</p>
+      <p>💥 Disparos automáticos ao pressionar o botão · 👾 Monstros perseguem você · 🌌 Arena espacial 3D</p>
+      <div class="buttons">
+        <button id="startBtn">JOGAR SOLO</button>
+        <button id="vrBtn">ENTRAR EM VR</button>
+        <button id="hostBtn">CRIAR SALA ONLINE</button>
+        <button id="joinBtn">ENTRAR EM SALA</button>
+      </div>
+      <div class="miniLabel">Escolha o mapa</div>
+      <select id="mapSelect" aria-label="Selecionar mapa"><option value="nebula">Nebulosa Ôrion · estação espacial</option><option value="forest">Floresta Bioluminescente</option><option value="ice">Planeta Glacial</option><option value="lava">Mundo Vulcânico</option><option value="crystal">Planeta de Cristais</option></select>
+      <div class="miniLabel">Escolha seu piloto / nave</div>
+      <select id="shipSelect" aria-label="Selecionar nave"><option value="cyan">Cometa Azul · equilibrada</option><option value="gold">Fênix Solar · rápida</option><option value="violet">Fantasma Violeta · furtiva</option></select>
+      <input id="roomCode" placeholder="Código/ID da sala para entrar" autocomplete="off" aria-label="Código da sala">
+      <p id="lobbyStatus">Online: crie uma sala e compartilhe o ID com outra pessoa.</p>
+      <p id="vrNote">VR requer navegador compatível, headset e HTTPS. O modo online usa conexão entre navegadores e depende da rede.</p>
+      <p style="font-size:12px">Protótipo em evolução · Loja, chefes e armas incluídos</p>
+    </div>
+  </div>
+  <div id="shop"><div id="shopCard"><h2>🛰️ ESTAÇÃO DE MELHORIAS</h2><p>Use seus pontos para preparar a próxima onda.</p><div id="shopOptions"></div><button id="nextWaveBtn">COMEÇAR PRÓXIMA ONDA</button></div></div>
+</div>
+<script type="module" src="script.js"></script>
+</body>
+</html>
